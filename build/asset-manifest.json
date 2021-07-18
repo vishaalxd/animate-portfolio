@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.15a73977.chunk.css",
+    "main.js": "/static/js/main.e35e5f55.chunk.js",
+    "main.js.map": "/static/js/main.e35e5f55.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8f5cdadd.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8f5cdadd.js.map",
+    "static/js/2.97dfa7a6.chunk.js": "/static/js/2.97dfa7a6.chunk.js",
+    "static/js/2.97dfa7a6.chunk.js.map": "/static/js/2.97dfa7a6.chunk.js.map",
+    "static/js/3.399168b4.chunk.js": "/static/js/3.399168b4.chunk.js",
+    "static/js/3.399168b4.chunk.js.map": "/static/js/3.399168b4.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.15a73977.chunk.css.map": "/static/css/main.15a73977.chunk.css.map",
+    "static/js/2.97dfa7a6.chunk.js.LICENSE.txt": "/static/js/2.97dfa7a6.chunk.js.LICENSE.txt",
+    "static/media/bg.f8b7d76b.svg": "/static/media/bg.f8b7d76b.svg",
+    "static/media/App.scss": "/static/media/bird.4d48b5ba.svg",
+    "static/media/cloud-left-center.00ba074c.svg": "/static/media/cloud-left-center.00ba074c.svg",
+    "static/media/cloud-left.081cd7ca.svg": "/static/media/cloud-left.081cd7ca.svg",
+    "static/media/cloud-right-center.10c69b94.svg": "/static/media/cloud-right-center.10c69b94.svg",
+    "static/media/cloud-right.78dd5c06.svg": "/static/media/cloud-right.78dd5c06.svg",
+    "static/media/cross-orange.b92acbd6.svg": "/static/media/cross-orange.b92acbd6.svg",
+    "static/media/dot-small.bd9dc122.svg": "/static/media/dot-small.bd9dc122.svg",
+    "static/media/layer-1.85bfd3e0.svg": "/static/media/layer-1.85bfd3e0.svg",
+    "static/media/layer-2.aed392fc.svg": "/static/media/layer-2.aed392fc.svg",
+    "static/media/layer-3.e5cf9634.svg": "/static/media/layer-3.e5cf9634.svg",
+    "static/media/layer-4.7004b220.svg": "/static/media/layer-4.7004b220.svg",
+    "static/media/layer-5.f0f2e844.svg": "/static/media/layer-5.f0f2e844.svg",
+    "static/media/layer-6.35273e43.svg": "/static/media/layer-6.35273e43.svg",
+    "static/media/layer-7.5b3a5bd1.svg": "/static/media/layer-7.5b3a5bd1.svg",
+    "static/media/logo.c7e9c52b.gif": "/static/media/logo.c7e9c52b.gif",
+    "static/media/orange-dotted.35139587.svg": "/static/media/orange-dotted.35139587.svg",
+    "static/media/triangle-orange.296be620.svg": "/static/media/triangle-orange.296be620.svg",
+    "static/media/triangle-yellow.cd3531fe.svg": "/static/media/triangle-yellow.cd3531fe.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f5cdadd.js",
+    "static/js/2.97dfa7a6.chunk.js",
+    "static/css/main.15a73977.chunk.css",
+    "static/js/main.e35e5f55.chunk.js"
+  ]
+}
