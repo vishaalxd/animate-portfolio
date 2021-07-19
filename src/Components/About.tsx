@@ -4,7 +4,7 @@ import cross from "../img/cross-orange.svg";
 import triangleOrange from "../img/triangle-orange.svg";
 import triangleYellow from "../img/triangle-yellow.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faEnvelope, faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithubAlt,
   faLinkedinIn,
@@ -61,6 +61,9 @@ const About: FC<AboutProps> = ({ scrollToContact }:AboutProps) => {
             </div>
             <div onClick={()=> {window.open("https://api.whatsapp.com/send?phone=919972939181&text&app_absent=0", "_blank")}}>
               <FontAwesomeIcon icon={faWhatsapp} size="3x" />
+            </div>
+            <div onClick={()=> {window.open("mailto:vishaalxd@outlook.com", "_blank")}}>
+              <FontAwesomeIcon icon={faEnvelope} size="3x" />
             </div>
           </div>
         </div>
