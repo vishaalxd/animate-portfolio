@@ -46,7 +46,7 @@ const About: FC<AboutProps> = ({ scrollToContact }:AboutProps) => {
             <div className="teal lms" onClick={scrollToContact}>
               Let's make something special.
             </div>
-            <a className="pbutton" href="../public/Vishal_philip.pdf" download>
+            <a className="pbutton" href={process.env.PUBLIC_URL + "/Vishal_philip.pdf"} download>
               Resumé <FontAwesomeIcon icon={faDownload} />
             </a>
           </div>
