@@ -6,39 +6,46 @@ interface ContactProps {
   refer: any;
 }
 interface MailTemplate {
-  name: string;
-  email: string;
+  from_name: string;
+  from_email: string;
   subject: string;
-  description: string;
+  message: string;
+  success?: string | null;
 }
 
 //emailjs.send("service_e3h364v","template_xhn4zws");
 
 const Contact: React.FC<ContactProps> = (props: ContactProps) => {
-  const [state, setState] = React.useState<MailTemplate>({
-    name: "",
-    email: "",
+  const initState = {
+    from_name: "",
+    from_email: "",
     subject: "",
-    description: "",
-  });
+    message: "",
+    succes: null,
+  };
+  const [state, setState] = React.useState<MailTemplate>(initState);
 
   const sendEmail = (e: any) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_e3h364v",
-        "template_xhn4zws",
-        e.target,
-        "user_Pr2hyEtuVN71lr1D29K9F"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    if (state.from_name && state.from_email && state.message) {
+      emailjs
+        .sendForm(
+          "service_e3h364v",
+          "template_xhn4zws",
+          e.target,
+          "user_Pr2hyEtuVN71lr1D29K9F"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setState({ ...initState, success: "Submitted" });
+          },
+          (error) => {
+            console.log(error.text);
+            setState({ ...initState, success: "Failed to Send " });
+          }
+        );
+    } else setState({ ...state, success: "update missing details..." });
   };
 
   const handleChange = (e: any) => {
@@ -73,7 +80,8 @@ const Contact: React.FC<ContactProps> = (props: ContactProps) => {
                       type="text"
                       className="inputStyle"
                       name="from_name"
-                      // onChange={handleChange}
+                      value={state.from_name}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="flex">
@@ -82,7 +90,8 @@ const Contact: React.FC<ContactProps> = (props: ContactProps) => {
                       type="text"
                       className="inputStyle"
                       name="from_email"
-                      // onChange={handleChange}
+                      value={state.from_email}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -92,25 +101,46 @@ const Contact: React.FC<ContactProps> = (props: ContactProps) => {
                     <input
                       className="subject"
                       name="subject"
-                      // onChange={handleChange}
+                      value={state.subject}
+                      onChange={handleChange}
                     />
                     <br />
                     <label>message* </label>
                     <textarea
                       name="message"
                       placeholder="tell me about it..."
-                      // onChange={handleChange}
+                      value={state.message}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
                 <div className="align-right">
-                  <input
-                    type="submit"
-                    className="pbutton"
-                    value="Up and Away"
-                  />{" "}
-                  Up and Away
-                  {/* </input> */}
+                  {!state.success && (
+                    <input
+                      type="submit"
+                      className="pbutton"
+                      value="Up and Away"
+                      id="submitButton"
+                    />
+                  )}
+                  {state.success && (
+                    <div className="flex" style={{ color: "white" }}>
+                      <input
+                        type="submit"
+                        className="pbutton"
+                        value={state.success}
+                        id="submitButton"
+                      />
+                      <h2>
+                        &nbsp;
+                        {state.success === "Submitted" ? (
+                          <>&#10003;</>
+                        ) : (
+                          <>&#10060;</>
+                        )}
+                      </h2>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
