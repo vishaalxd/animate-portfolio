@@ -24,7 +24,6 @@ const Contact: React.FC<ContactProps> = (props: ContactProps) => {
 
   const sendEmail = (e: any) => {
     e.preventDefault();
-    console.log(e.target);
     emailjs
       .sendForm(
         "service_e3h364v",
