@@ -150,6 +150,7 @@
   input:-webkit-autofill:focus, 
   input:-webkit-autofill:active{
     background: #171429;
+    opacity: 0.6;
   }
 
   input::placeholder,
